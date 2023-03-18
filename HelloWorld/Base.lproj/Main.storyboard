@@ -16,54 +16,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pgT-QD-cMi">
-                                <rect key="frame" x="16" y="195" width="361" height="56"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfn-UK-joe">
-                                <rect key="frame" x="66" y="572.66666666666663" width="261" height="41"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="YVJ-6x-fcO">
+                                <rect key="frame" x="16" y="79" width="361" height="364"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-2Z-MvK">
+                                        <rect key="frame" x="130.66666666666666" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x12-Aa-1CY">
+                                        <rect key="frame" x="130.66666666666666" y="132" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1j-50-eeI">
+                                        <rect key="frame" x="130.66666666666666" y="264" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="261" id="rgd-yb-KIH"/>
+                                    <constraint firstItem="x12-Aa-1CY" firstAttribute="centerX" secondItem="YVJ-6x-fcO" secondAttribute="centerX" id="vsp-ly-59f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fb-NN-Bzl">
+                                <rect key="frame" x="16" y="738" width="361" height="60"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="48" minY="16" maxX="48" maxY="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Show greeting">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="greetingButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxT-uW-Kjg"/>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fkt-JR-2Mt"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xfn-UK-joe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Clg-Sn-HbC"/>
-                            <constraint firstItem="pgT-QD-cMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MjD-1R-YSX"/>
-                            <constraint firstItem="pgT-QD-cMi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="136" id="glq-LM-bEV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgT-QD-cMi" secondAttribute="trailing" constant="16" id="iyC-xZ-vJg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xfn-UK-joe" secondAttribute="bottom" multiplier="4:3" id="wbZ-SG-kce"/>
+                            <constraint firstItem="YVJ-6x-fcO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7lv-d2-gh8"/>
+                            <constraint firstItem="8Fb-NN-Bzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Epq-3k-vXI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YVJ-6x-fcO" secondAttribute="trailing" constant="16" id="YIp-LQ-wcZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Fb-NN-Bzl" secondAttribute="trailing" constant="16" id="YUg-Zn-oVI"/>
+                            <constraint firstItem="YVJ-6x-fcO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="g7s-J0-Qym"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Fb-NN-Bzl" secondAttribute="bottom" constant="20" id="koX-NV-K1A"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greetingButton" destination="xfn-UK-joe" id="Ucq-J6-J6X"/>
-                        <outlet property="greetingLabel" destination="pgT-QD-cMi" id="wPd-oA-VfX"/>
+                        <outlet property="greenTrafficLight" destination="l1j-50-eeI" id="fsP-MQ-SLH"/>
+                        <outlet property="redTrafficLight" destination="Wcy-2Z-MvK" id="d6E-f3-XAz"/>
+                        <outlet property="startButton" destination="8Fb-NN-Bzl" id="8nH-q1-ltN"/>
+                        <outlet property="yellowTrafficLight" destination="x12-Aa-1CY" id="IHU-xw-EX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="-32"/>
+            <point key="canvasLocation" x="486.97674418604652" y="-32.832618025751074"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
