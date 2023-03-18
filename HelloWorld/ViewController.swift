@@ -8,23 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var greetingLabel: UILabel!
-    @IBOutlet var greetingButton: UIButton!
     
+    @IBOutlet var redTrafficLight: UIView!
+    @IBOutlet var yellowTrafficLight: UIView!
+    @IBOutlet var greenTrafficLight: UIView!
+    
+    @IBOutlet var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.isHidden.toggle()
-        greetingButton.layer.cornerRadius = 12
     }
 
-    @IBAction func greetingButtonDidTapped() {
-        greetingLabel.isHidden.toggle()
-        greetingButton.setTitle(
-            greetingLabel.isHidden ? "Show greeting" : "Hide greeting",
-            for: .normal
-        )
+    @IBAction func startButtonTapped(_ sender: UIButton) {
     }
     
 }
